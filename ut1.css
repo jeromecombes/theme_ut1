@@ -1,0 +1,1111 @@
+/**
+Planning Biblio, Version 7
+Licence GNU/GPL (version 2 et au dela)
+Voir les fichiers README.md et LICENSE
+@copyright 2011-2016 Jérôme Combes
+
+Fichier : themes/ut1/ut1.css
+Création : 19 juillet 2017
+Dernière modification : 19 juillet 2017
+@author Jérôme Combes <jerome@planningbiblio.fr>
+
+Description :
+Feuille de style personnalisée pour l'université Toulouse 1 Capitole
+
+Incluse dans les fichiers include/header.php et setup/header.php
+*/
+
+/* Rose clair #e7154c
+ * Rose foncé #c81242
+ * Rose pale #e7d3d8
+ * Rose texte #C03;
+ * Jaune : #F2E311
+ */
+body,a,input,select,textarea,button {
+	color:#000;
+	font-family: arial, helvetica, sans-serif;
+	font-size:15px;
+	}
+
+input:disabled {
+	color:grey;
+}
+
+input,select,textarea {
+	font-size:13px;
+	}
+
+body {
+        background: #FFF;
+	margin-top:0px;
+	margin-left:10px;
+	}
+
+#topgauche {
+  background: #FFFFFF;
+  color : #FFFFFF;
+  padding: 5px;
+  margin: 15px 0;
+  width: 100%;
+}
+
+#topgauche table tr:nth-child(2) {
+  display: none;
+}
+
+#topgauche table tr:nth-child(1) {
+  background: #222222;
+}
+
+#topgauche table tr:nth-child(1) td:nth-child(1) {
+  width: 0px;
+  margin-right: 200px;
+}
+
+#topgauche table tr:nth-child(3) {
+  background: #222222;
+  height: 35px;
+}
+
+h3{
+  margin-top:25px;
+  font-size:14pt;
+}
+
+#acces_refuse {
+  margin: 60px 0 80px 0;
+  width:100%;
+  text-align:center;
+  font-weight:bold;
+}
+
+#auth, #auth input {
+  color:#C03;
+  text-align: left;
+
+}
+
+#auth-logo{
+  margin:15px auto 0 auto;
+  width:200px;
+  height:80px;
+  background:url("images/logo200.png") no-repeat right top;
+}
+
+#h2-authentification, #h2-planning-authentification {
+  text-align:center;
+  margin: 30px 0 30px;
+}
+
+#h2-planning-authentification {
+  display:none;
+}
+
+#logo {
+	position: absolute;
+	left: 65px;
+	top: -10px;
+	width:96px;
+	height:96px;
+	background-image: url("images/logo_fr.png");
+        background-color: #cd042e;
+        z-index: 10;
+        display: block;
+}
+
+#logo2 {
+	position: absolute;
+	left: 140px;
+	top: 23px;
+	font-size: 24pt;
+	color:#A82F0B;
+}
+
+#logout_img{
+  text-align:right;
+  width:42px;
+  padding-right: 7px;
+}
+
+#logout_text a{
+  font-size:13pt;
+  display:none;
+}
+
+#title{
+  text-align:center;
+}
+
+#content{
+  margin-top: 10px;
+  padding: 80px 5px 5px 5px;
+}
+
+#content-auth{
+  margin-top: 10px;
+  padding: 40px 0 0 0;
+  text-align: center;
+}
+
+#content-planning{
+  margin-top: 10px;
+  padding: 40px 0 0 0;
+}
+
+#ferie,.ferie,.important {
+  color: #c81242;
+}
+
+.absences-pj{
+  display:inline;
+  padding:0 8px;
+  white-space:nowrap;
+  text-align:center;
+}
+
+.absences-pj-fiche{
+  display:inline;
+  margin-right:40px;
+}
+
+/*	Icônes		*/
+.pl-icon{
+  padding: 5px 13px 5px 13px;
+  text-decoration:none;
+}
+
+.pl-icon-add {
+  background:url("images/add.png") no-repeat center;
+}
+
+.pl-icon-copy {
+  background:url("images/copy.png") no-repeat center;
+}
+
+.pl-icon-drop {
+  background:url("images/drop.png") no-repeat center;
+}
+
+.pl-icon-edit {
+  background:url("images/edit.png") no-repeat center;
+}
+
+.pl-icon-google-calendar {
+  background:url("images/googlecalendar.png") no-repeat center;
+}
+
+.pl-icon-hide {
+  background:url("images/hide.png") no-repeat center;
+}
+
+.pl-icon-lock {
+  background:url("images/lock.png") no-repeat center;
+}
+
+.pl-icon-logout {
+  background:url("images/logout.png") no-repeat center;
+}
+
+.pl-icon-open {
+  background:url("images/open.png") no-repeat center;
+}
+
+.pl-icon-printer {
+  background:url("images/printer.png") no-repeat center;
+}
+
+.pl-icon-refresh {
+  background:url("images/refresh.png") no-repeat center;
+}
+
+.pl-icon-save {
+  background:url("images/save.png") no-repeat center;
+}
+
+.pl-icon-unlock {
+  background:url("images/unlock.png") no-repeat center;
+}
+
+/* Info-bulles */
+.ui-tooltip{
+  /* Permet les sauts de lignes avec l'entité .&#013; */
+  white-space:pre-wrap;
+}
+
+/* Les agents */
+.agent-acces-checked2{
+  position:absolute;
+  left:500px;
+}
+
+/* Importation des agents */
+#import-div td {
+  padding: 0 10px 0 10px;
+}
+
+
+/* Les tableaux */
+.tableauStandard,.tableauFiches{
+  border-spacing: 0px;
+  border-collapse: collapse;
+  margin-top:10px;
+}
+
+.tableauStandard td{
+  text-align: center;
+  vertical-align:top;
+  padding: 0 20px 0 20px;
+}
+
+.tableauFiches td{
+  text-align: left;
+  vertical-align:top;
+  padding: 0 60px 10px 10px;
+}
+
+.tableauFiches .td_validation{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.tableauFiches input[type=text]{
+  width: 200px;
+  text-align:center;
+}
+
+.tableauFiches select, .tableauFiches input[type=text].ui-widget-content{
+  width: 100%;
+}
+
+.tableauFiches textarea{
+  width: 100%;
+  height: 100px;
+} 
+
+.tableauFiches input[type=button],.tableauFiches input[type=submit]{
+  margin: 0 20px 0 20px;
+}
+
+.tableauFiches .tdValidation{
+  padding-top:20px;
+  text-align:center;
+} 
+
+/* Menu Principal */
+/* .logo_td : permet de positionner le menu principal, 1ere cellule avant le 1er item du menu */
+.logo_td{
+  width:260px;
+}
+
+/*		Menu JavaScript		*/
+.menu_table{
+  position: absolute;
+  min-width:200px;
+}
+
+.menu_table td{
+  padding : 1px 10px;
+  border: 1px outset #c81242;
+  border-top: 0px;
+}
+
+.menu_table tr:first-child td{
+  border-top: 1px outset #c81242;
+}
+
+.ejsmenu2{
+  padding : 5px;
+  color: #FFFFFF;
+}
+
+.ejsmenu2:hover{
+  color: #e7154c;
+}
+
+.navigation { position:relative;height:30px;}
+.popper { position: absolute; visibility: hidden; z-index:20; }
+a.ejsmenu2, a:hover.ejsmenu2 {font-size:16px; text-decoration:none;font-weight:bold;}
+
+a.ejsmenu {
+  color: #000;
+}
+
+a.ejsmenu:hover {
+  color: #FFF;
+}
+
+/* Menu top */
+.menu_ul{
+  margin:0px;
+  white-space: nowrap;
+  list-style: none;
+}
+
+.menu_li{
+  display: inline;
+  padding: 5px 15px;
+  border-left: 1px solid #AAA;
+}
+
+.menu_li:first-child{
+  border-left: none;
+}
+
+.menu_li a, .menu_li a:hover{
+  font-size:13pt;
+}
+
+/* TD du menu top */
+li.menu_li:hover {
+  background:#222222;
+}
+
+/* TD des sous menu top */
+.menu_table{
+  margin-top: 12px;
+}
+
+.menu_table td{
+/*   text-align:left; */
+  border: none;
+}
+
+td.menu_td2{
+  background: url('images/ul-style.png') no-repeat left 9px center;
+  background-color: #e7154c;
+  height:25px;
+  text-align:left;
+  padding-left: 24px;
+  color: #333;
+}
+
+td.menu_td2:hover{
+  background: url('images/ul-style-hover.png') no-repeat left 9px center;
+  background-color: #c81242;
+  color: #FFFFFF;
+}
+
+.myAccountLink{
+  font-size:10pt;
+  color: #000000;
+}
+
+.myAccountLink:hover{
+  color: #e7154c;
+}
+
+input[type=text],input[type=password]
+	{
+	width:150px;
+	}
+select
+	{
+	width:155px;
+	}
+
+
+#popup {
+	background-color:#FFF;
+	position:absolute;
+	z-index:10;
+	}
+
+#opac {
+	opacity: 0.5;
+	filter: alpha(opacity=50);		/*	Pour IE */
+	background:#000;
+	height:100%;
+	width:100%;
+	position:fixed;
+	left:0px;
+	top:0px;
+	z-index:5;
+	}
+
+.th{
+  background-color:#c81242;
+  color: #FFF;
+  font-weight:bold;
+  white-space: nowrap;
+}
+
+.th td{
+  padding: 8px 5px;
+}
+
+.tr1{
+  background-color:#e7d3d8;
+}
+
+.tr2{
+  background-color:#FFFFFF;
+}
+
+.striped{
+  text-decoration:line-through;
+}
+
+.aLeft{
+  text-align:left;
+}
+
+.aRight{
+  text-align:right;
+}
+
+.green{
+  color:green;
+}
+
+.orange{
+  color:#FFA500;
+}
+
+.red{
+  color:red;
+}
+
+.pointer{
+  cursor:pointer;
+}
+
+/*		Plannings				*/
+/* Calendrier, titre (Semaine ...), Boutons de droite */
+#divcalendrier {
+  margin : 10px 0 0 0;
+}
+
+.pl-validation {
+  margin: 0 0 10px 0;
+}
+
+#planning-semaine #td_boutons{
+  padding:30px;
+}
+
+}
+.pl-semaine-header{
+  text-align: left;
+  margin: 50px 0 5px 0;
+  width: 100%;
+}
+
+.pl-semaine-date{
+  font-size: 16pt;
+/*   font-family: bold; */
+}
+
+.pl-semaine-validation{
+  margin: 10px 0 0 0;
+  position: absolute;
+  right:10px;
+}
+
+#planningTips {
+  margin: 20px 0px;
+  color: #EF6C6C;
+  font-weight: bold;
+  display: none;
+}
+
+#date_planning, #semaine_planning {
+  margin-top: 6px;
+  font-weight:bold;
+}
+
+#semaine_planning{
+  display:none;
+}
+
+/*
+table #tabsemaine1 .tabsemaine1
+    -----------------------------------------------------------------------------------------------------
+tr .tr_horaires		|   td					|   td					|
+    -----------------------------------------------------------------------------------------------------
+tr  | td .td_postes	|   td >				|   td >				|
+    | [.td_obligatoire]	|	div .cellDiv > span .cellSpan	|	div .cellDiv > span .cellSpan	|
+    | [.td_renfort]	|	div .cellDiv > span .cellSpan	|	div .cellDiv > span .cellSpan	|
+    |			|	div .cellDiv > span .cellSpan	|	div .cellDiv > span .cellSpan	|
+    -----------------------------------------------------------------------------------------------------
+tr  | td .td_postes	|   td >				|   td >				|
+    | [.td_obligatoire]	|	div .cellDiv > span .cellSpan	|	div .cellDiv > span .cellSpan	|
+    | [.td_renfort]	|	div .cellDiv > span .cellSpan	|	div .cellDiv > span .cellSpan	|
+    |			|	div .cellDiv > span .cellSpan	|	div .cellDiv > span .cellSpan	|
+    -----------------------------------------------------------------------------------------------------
+tr .tr_separation
+    -----------------------------------------------------------------------------------------------------
+tr  | td .td_postes	|   td >				|   td >				|
+    | [.td_obligatoire]	|	div .cellDiv > span .cellSpan	|	div .cellDiv > span .cellSpan	|
+    | [.td_renfort]	|	div .cellDiv > span .cellSpan	|	div .cellDiv > span .cellSpan	|
+    |			|	div .cellDiv > span .cellSpan	|	div .cellDiv > span .cellSpan	|
+    -----------------------------------------------------------------------------------------------------
+tr .tr_espace
+*/
+
+/*	Catégories, lignes du planning, en fonction de la catégorie requise par le poste	*/
+/*
+.tr_CategorieA td{
+}
+
+.tr_CategorieA td.td_obligatoire{
+}
+
+.tr_CategorieB td{
+}
+
+.tr_CategorieB td.td_obligatoire{
+}
+
+.tr_CategorieC td{
+}
+
+.tr_CategorieC td.td_obligatoire{
+}
+
+td.cellule_grise{
+}
+*/
+
+/*	Cellules et Statuts
+class cellule = cellule par défaut
+.statut_xxx	 = complète le style de la cellule en fonction du statut
+.service_xxx	 = complète le style de la cellule en fonction du service
+*/
+/*
+.statut_moniteur, td.statut_moniteur{
+  background:yellow;
+}
+*/
+
+
+#tabsemaine1, .tabsemaine1 {
+  width:100%;
+  empty-cells:show;
+}
+
+#tabsemaine1 tr{
+}
+
+#tabsemaine1 td, .tabsemaine1 td{
+  border-width : 1px;
+  border-style : outset;
+}
+
+.tr_horaires, .tr_separation, .tr_horaires a{
+  background: #c81242;
+  color:#FFFFFF;
+  font-size:12pt;
+  font-weight:bold;
+}
+
+/* tr_espace : permet d'ajouter un espace entre les tableaux : ex: display:block; height:20px; */
+.tr_espace{
+  display: block;
+  height:20px; 
+}
+
+#tabsemaine1 tr.tr_espace td,
+.tabsemaine1 tr.tr_espace td{
+  border: none;
+}
+
+.td_postes {
+  width:192px;
+  font-size:12pt;
+  font-weight: bold;
+}
+
+.td_obligatoire{
+  background:#cccc00;
+}
+
+.td_renfort{
+  background:#FFFFFF;
+}
+
+.cellDiv{
+}
+
+.cellSpan{
+  display:block;
+  padding:3px;
+  white-space: nowrap;
+}
+
+#afficheTableaux{
+  text-align: left;
+  margin: 2px 0 10px 0;
+}
+
+.noteBasDePage{
+  text-align:left;
+  padding-top:30px;
+  font-style:italic;
+  font-size:10pt;
+}
+
+.menudiv-titre{
+  background:#7B7B7B;
+  color:#FFFFFF;
+  text-align:center;
+  text-decoration:none;
+  font-size:11.0pt;
+  font-family: arial, helvetica, sans-serif;
+  font-weight: bold
+}
+
+#menudiv1{
+  position:absolute;
+  z-index:10;
+  width:230px;
+  overflow:auto;
+}
+
+#menudiv2{
+  position:absolute;
+  z-index:20;
+  width:240px;
+  overflow:auto;
+}
+
+#menudivtab1, #menudivtab2{
+  position:absolute;
+  cursor:pointer;
+  background: #FFFFFF;
+}
+
+#menudivtab1 td{
+  padding-left: 15px;
+}
+
+#menudivtab2 td{
+  padding-left: 10px;
+}
+
+.menudiv-tr:hover{
+  background:#CCCCCC;
+}
+
+/* Configuration des tableaux */
+.tableaux-cfg {
+  display: inline-block;
+  min-width:500px;
+  width: 30%;
+  vertical-align:top;
+  padding: 0 15px;
+}
+
+
+#tab_titre{	/* planning/poste/index.php */
+  width:100%;
+  border: none;
+}
+
+/* Calendrier affiché en haut des plannings */
+#pl-calendar{
+  border:0;
+  background: #FFFFFF;
+  margin: 0 0 10px 12px;
+  z-index: 20;
+  display: block;
+}
+
+#pl-calendar .ui-datepicker {
+  font-size:85%;
+}
+
+
+#pl-calendar .ui-datepicker a{
+  font-size:110%;
+}
+
+/* Notes affichées en bas des plannings */
+#pl-notes-div1, .pl-notes-div1{
+  margin: 20px 0 0 0;
+  border : 1px solid #c81242;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#pl-notes-div2{
+  position: absolute;
+  left: 10px;
+  display: inline-block;
+  margin: 5px 0 0 0;
+  text-align: left;
+}
+
+#pl-notes-div1-validation{
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  padding: 5px 0;
+}
+
+#pl-appelDispo-sujet{
+  width: 100%;
+}
+
+#pl-appelDispo-text{
+  width: 100%;
+  height: 200px;
+}
+
+#pl-notes-text{
+  width: 100%;
+  height: 240px;
+}
+
+.print_only
+	{
+	font-size:13px; 
+	display:none;
+	}
+
+.menu
+	{
+	background:white;
+	text-decoration:none;
+	font-size:10.0pt;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+	z-index:3;
+	}
+	
+.menuRed
+	{
+	color:#C03;
+	background:white;
+	text-decoration:none;
+	font-size:10.0pt;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold;
+	z-index:3;
+	}
+
+a:hover.menuRed, a:hover.menu {
+	color:#C03;
+	font-size:10.0pt;
+}
+
+.menu2
+	{
+	color:#C03;
+	background:white;
+	text-decoration:none;
+	font-size:8.0pt;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold
+	}
+	
+.menu2Red
+	{
+	color:red;
+	background:white;
+	text-decoration:none;
+	font-size:8.0pt;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold
+	}
+
+.right
+	{
+	color:#C03;
+	text-decoration:none;
+	text-align:right;
+	font-size:10.0pt;
+	font-family: arial, helvetica, sans-serif;
+	font-weight:normal;
+	}
+
+.text,.text_clic
+	{
+	color:#000000;
+	text-decoration:none;
+	font-size:10.0pt;
+	font-family: arial, helvetica, sans-serif;
+	}
+
+.titre
+	{
+	position:absolute;
+	top:50px;
+	left:380px;
+	color:white; 
+	font-size:32.0pt;
+	font-family: arial, helvetica, sans-serif;
+	}
+
+.titreSemFixe{
+  color:#C03;
+  text-decoration:none;
+  font-size:10.5pt;
+  font-family: arial, helvetica, sans-serif;
+  width:50%;
+  text-align:center;
+}
+
+#tab_jours{	/*	planning/poste/index.php	*/
+  margin : 5px auto 0px auto;
+  text-align:center;
+}
+
+.tr
+	{
+	color:#FFF;
+	text-decoration:none;
+	font-size:11.0pt;
+	font-family: arial, helvetica, sans-serif;
+	font-weight: bold
+	}
+
+.cellule_grise {
+	text-align:center;
+	background:#DDD;
+	}
+
+/*																				*/
+/*	Setup																		*/
+/*																				*/
+#setup #auth-logo{
+  position:relative;
+  margin: 20px;
+}
+
+#setup input[type=text], #setup input[type=password]{
+	width:300px;
+	margin:2px;
+	}
+
+#setup input[type=checkbox]{
+  margin:4px;
+}
+#setup fieldset{
+	width:640px;
+	padding: 20px;
+	}
+
+	
+#aide {
+	margin:0px 80px 0px 30px;
+	text-align:justify;
+	}
+	
+#aide h3 {
+	margin-top:30px;
+	margin-bottom:10px;
+	}
+#aide h4 {
+	margin-left:20px;
+	margin-top:30px;
+	margin-bottom:10px;
+	}
+#aide h5 {
+	font-size:12pt;
+	margin-left:40px;
+	margin-top:30px;
+	margin-bottom:10px;
+	}
+
+#a_retour {
+  position:fixed;
+  right:20px;
+  bottom:20px;
+}
+
+/*	Messages d'informations		*/
+#messages_infos {
+	color:#DF3838;	
+	font-weight:bold;
+	font-size:13pt;
+}
+
+img{
+  border: none;
+}
+
+#tab_titre tr{
+  vertical-align:top;
+}
+
+#cal_ifram{	
+  width:200px;
+  height:160px;
+}
+
+#td_boutons{
+  width:25%;
+  text-align:right;
+}
+
+#validation{
+  font-size:13px;
+  margin:10px 20px 0 0;
+}
+
+#imprimante{
+  cursor:pointer;
+}
+
+#choix_tableaux{
+  margin: 20px 15px;
+}
+
+#choix_tableaux td{
+  width:200px;
+  padding: 10px 0;
+}
+
+#choix_tableaux select{
+  width:180px;
+}
+
+#tableau, .tableau{
+  text-align:center;
+}
+
+/*	Jours Fériés	*/
+#joursFeries table{
+  width:1024px;
+  margin-top:30px;
+}
+
+#joursFeries .c350{
+  width:300px;
+}
+
+#joursFeries .c100{
+  width:100px;
+}
+
+.intitule, label{
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Elements "sortable" (gestion des motifs d'absences, des statuts des agents */
+ul[id$="-sortable"] { list-style-type: none; margin: 0; padding: 0; }
+ul[id$="-sortable"] li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; height: 18px; }
+ul[id$="-sortable"] li span { position: absolute; margin-left: -1.3em; }
+
+.bold{
+  font-weight:bold;
+}
+
+option.bold{
+  margin-top:3px;
+}
+
+.center{
+  text-align:center;
+}
+
+.inline{
+  display: inline;
+}
+
+.nowrap{
+  white-space:nowrap;
+}
+
+.padding20{
+  padding-left:20px;
+}
+
+/* Statistiques */
+#stat-col1{
+  width:350px;
+}
+
+#stat-col1 select,#stat-col1 input[type=text]{
+  width:250px;
+}
+
+.statistiques-heures{
+  text-align:right;
+  white-space:nowrap;
+}
+
+#table_temps{
+  text-align:center;
+}
+
+/*	FixedColumns	*/
+.DTFC_LeftBodyLiner{
+  overflow:hidden;
+}
+
+.bg-yellow{
+  background:yellow;
+}
+
+/*	DataTables */
+.dataTable tbody tr.odd {
+  background-color: #e7d3d8;
+}
+
+.dataTable tbody tr.odd td.sorting_1,
+.dataTable tbody tr.odd td.sorting_2,
+.dataTable tbody tr.odd td.sorting_3{
+  background-color: #e7c3cd;
+}
+
+.dataTable tbody tr.even td.sorting_1,
+.dataTable tbody tr.even td.sorting_2,
+.dataTable tbody tr.even td.sorting_3{
+  background-color:#F3E1E1;
+}
+
+/*	JQuery-UI Accordion	*/
+.ui-accordion .ui-accordion-header{
+  margin-bottom: 0px;
+}
+
+/*	Agenda	*/
+#div_agenda{
+  min-height:400px;
+}
+
+#div_agenda .information{
+  display: inline-block;
+}
+
+#tab_agenda td{
+  vertical-align: top;
+}
+
+#tab_agenda td{
+  border-right : 1px outset;
+  border-bottom : 1px outset;
+  border-radius : 0 0 5px 0;
+}
+
+#div_agenda .div_date{
+  font-weight:bold;
+  text-decoration:underline;
+  margin-bottom:10px;
+  text-align:center;
+}
+
+#div_agenda ul{
+  margin-top:0px;
+  padding-left:20px;
+}
+
+#div_agenda .postes{
+  margin-top: 10px;
+}
+
+/*	Footer	*/
+.footer{
+  text-align:center;
+  margin:50px 30px 0 0;
+  opacity:0.7;
+  font-size:9pt;
+  width:100%;
+}
+
+/*	Congés	*/
+#tableConges td{
+  white-space: nowrap;
+}
