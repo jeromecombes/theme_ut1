@@ -80,15 +80,15 @@ h3{
 }
 
 #auth, #auth input {
-  color:#C03;
+  color:#222;
   text-align: left;
 
 }
 
 #auth-logo{
   margin:15px auto 0 auto;
-  width:200px;
-  height:80px;
+  width:400px;
+  height:96px;
   background:url("images/logo200.png") no-repeat right top;
 }
 
