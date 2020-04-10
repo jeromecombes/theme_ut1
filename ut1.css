@@ -719,7 +719,7 @@ class cellule = cellule par défaut
   font-size:110%;
 }
 
-#pl-calendar .ui-state-hover .ui-icon{
+/*#pl-calendar .ui-state-hover .ui-icon{
   background-image: url("images/ui-icons_8a2be2_256x240.png");
 }
 
@@ -729,7 +729,7 @@ class cellule = cellule par défaut
 
 #pl-calendar .ui-datepicker-title{
   background: #8a2be2;
-}
+}*/
 
 /* Notes affichées en bas des plannings */
 #pl-notes-div1, .pl-notes-div1{
